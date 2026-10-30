@@ -3,14 +3,12 @@ import "./globals.css";
 
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Inter, Schibsted_Grotesk, Geist } from "next/font/google";
+import localFont from "next/font/local";
 import { GeistSans } from "geist/font/sans";
 import { cn } from "@/lib/utils";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Settings } from "@/components/settings";
-
-const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 const analyticsDomain = process.env.NEXT_PUBLIC_ANALYTICS_DOMAIN;
 const analyticsScriptUrl = process.env.NEXT_PUBLIC_ANALYTICS_SCRIPT_URL;
@@ -42,15 +40,23 @@ export const metadata: Metadata = {
   },
 };
 
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+const inter = localFont({
+  src: [
+    { path: "../public/fonts/inter-400.ttf", weight: "400" },
+    { path: "../public/fonts/inter-500.ttf", weight: "500" },
+    { path: "../public/fonts/inter-600.ttf", weight: "600" },
+    { path: "../public/fonts/inter-700.ttf", weight: "700" },
+  ],
   variable: "--font-inter",
 });
 
-const schibstedGrotesk = Schibsted_Grotesk({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+const schibstedGrotesk = localFont({
+  src: [
+    { path: "../public/fonts/schibsted-grotesk-400.ttf", weight: "400" },
+    { path: "../public/fonts/schibsted-grotesk-500.ttf", weight: "500" },
+    { path: "../public/fonts/schibsted-grotesk-600.ttf", weight: "600" },
+    { path: "../public/fonts/schibsted-grotesk-700.ttf", weight: "700" },
+  ],
   variable: "--font-schibsted-grotesk",
 });
 
