@@ -4,15 +4,16 @@ My personal website and blog. Built with Next.js, Tailwind CSS v4, and MDX.
 
 ## Overview
 
-- `app/blog/*` - Blog posts rendered using MDX
+- `app/blog/*` - Blog routes and post rendering
+- `data/blog/*` - Blog posts stored as MDX files
 - `app/inspiration` - Design [inspiration](https://narayanmishra.vercel.app/inspiration)
 - `components/*` - Reusable UI components
 
 ## Getting Started
 
 ```bash
-git clone https://github.com/8narayanmishra/narayanmishra.vercel.app.git
-cd narayanmishra.vercel.app
+git clone https://github.com/8narayanmishra/personal-portfolio.git
+cd personal-portfolio
 npm install
 npm run dev
 ```
