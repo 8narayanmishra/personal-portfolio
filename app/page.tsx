@@ -7,6 +7,7 @@ import { Companies } from "@/components/companies";
 import { getAllFilesFrontMatter } from "@/lib/mdx";
 import { BlogList } from "@/components/blog/blog-list";
 import { WorkWithMe } from "@/components/work-with-me";
+import { GitHubContributions } from "@/components/github-contributions";
 
 type HomeBlogPost = {
   slug: string;
@@ -35,6 +36,8 @@ export default async function Home() {
       <Companies />
       <DottedSeparator className="my-10" />
       <WorkWithMe />
+      <DottedSeparator className="my-10" />
+      <GitHubContributions />
       <DottedSeparator className="my-10" />
       <BlogList posts={posts} />
       <DottedSeparator className="my-10" />
